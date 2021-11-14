@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="tr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/jquery.rateyo.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="~/Content/jquery.rateyo.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <title>Blog Sitesi</title>
+</head>
+<body>
+    <header>
+        <!--MENU ÇUBUĞU-->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/Home/Index">
+                        <img src="/Content/images/Logo.png" width="60" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        @Html.Partial("Arama")
+                        @Html.Partial("LoginPartial")
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+    @RenderBody()
+    <div class="bg-dark">
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/Sayfa/Anasayfa.html" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <img src="/Content/images/Logo.png" width="60" />
+                    </a>
+
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex pe-3">
+                    <li class="ms-3"><a class="text-muted" href="https://twitter.com/"><i class="bi bi-twitter"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="https://tr-tr.facebook.com/"><i class="bi bi-facebook"></i></a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    @RenderSection("script", false)
+</body>
+</html>
